@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>示例</title>
+		<style>
+			/* 标签选择器 */
+			div{
+				background-color: yellow;
+				width: 80%;
+				
+			}
+			/* id选择器 优先级更高 https://www.w3school.com.cn/tags/html_ref_colornames.asp*/
+			#div1{
+				background-color: ;
+			}
+			p{
+				text-indent: 2;
+			}
+			/* classss选择器 */
+			.uneven{
+				color: red;
+			}
+			.even{
+				color: ;
+			}
+			/* 并列选择器 */
+			
+		</style>
+		<link rel="shortcut icon" href="img/icon.jpg" />
+		
+	</head>
+
+	<body>
+		<div id="div1" >
+			我是div <br /> 我是div
+			<br /> 我是div
+			<br />
+		</div>
+		<div class="even">
+			无论在什么类型的文档中，无论在什么类型的文档中，<br /> 表格都是最常见的一种页面元素
+		</div>
+		<div>无论在什么类型的文档中， 无论在什么类型的文档中，表格都是最常见的一种页面元素
+		</div>
+		<div id="">
+			<p class="uneven">无论在什么类型的文档中， 无论在什么类型的文档中，表格都是最常见的一种页面元素
+			</p>
+			<p class="even">无论在什么类型的文档中， 无论在什么类型的文档中，表格都是最常见的一种页面元素
+			</p>
+			<p class="uneven">无论在什么类型的文档中， 无论在什么类型的文档中，表格都是最常见的一种页面元素
+			</p>
+			<p class="even">无论在什么类型的文档中， 无论在什么类型的文档中，表格都是最常见的一种页面元素
+			</p>
+		</div>
+	</body>
+
+</html>

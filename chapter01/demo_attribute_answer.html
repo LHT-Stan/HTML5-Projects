@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS常用属性</title>
+		<style type="text/css">
+			#div1{
+				/*background-color: #FF0000;*/
+				background-color: rgba(255,0,0,0.2);
+				min-height: 50px;
+				max-width: 200px;
+				word-wrap: break-word; /*长单词或url换行*/
+				/*font-family: "宋体";
+				font-size: 25px;
+				font-style: italic;*/
+				font:italic 25px "微软雅黑"; /*复合属性*/
+				
+			}
+			#div2{
+				background-color: rgb(255,0,0);
+				opacity: 0.8; /*整体透明度,rgba只针对颜色*/
+				width: 800px;
+				height: 600px;
+			}
+			img{
+				border: 5px solid blue; /*边框 大小 线型 颜色*/
+				padding: 20px;  /*内填充/内边距*/
+				margin: 30px;  /* 外边距*/
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">		hello 1.没有冲突，样式叠加在一起使用
+			2.冲突，看优先级权重2.冲突，看优先级权重
+			3.权重一样，后面定义的会被使用
+			4.！important可以提升优先级	
+			3.权重一样，后面定义的会被使用
+			4.！important可以提升优先级aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa		</div>
+		<div id="div2">		
+			<img src="img/bk.jpg"/>
+			<img src="img/bk.jpg"/>
+				hello	
+		</div>
+	</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- <link type="text/css" rel="stylesheet" href="./css/test.css" /> -->
+		<link href="https://fonts.font.im/css?family=Permanent+Marker" rel="stylesheet" >
+		<link rel="stylesheet" href="css/form.css">
+	</head>
+	<body>
+		
+		<!-- 
+		https://www.meishihui68.com.cn/FormTest.ashx
+		form
+			action:指定表单数据提交的URL
+				   *表单项数据想要被提交，则必须指定其name属性
+			method:指定表单提交的方式
+				1.get: 默认值
+					* 请求的参数会拼接在url的后面
+					* url的长度有限制 4kb
+				2.post:
+					* 请求参数会在http请求协议的请求体中
+					* 请求参数无限制的
+			label标签，使文字和输入框关联起来 label标签中的for与input标签中的id值一样
+			enctype="multipart/form-data"
+		 -->
+		<div class="signup-form">
+			<h1>Sign Up</h1>
+			<!-- <input type="text" placeholder="全名" class="txtb" />
+			<input type="email" placeholder="邮箱" class="txtb" />
+			<input type="password" placeholder="密码" class="txtb" />
+			<input type="submit" value="Create Account" class="signup-btn" /> -->
+			<form action="https://www.meishihui68.com.cn/FormTest.ashx" enctype="multipart/form-data" method="post">
+				<!-- <label for="uname">用户名：</label> -->
+				<input class="txtb" placeholder="用户名" type="text" name="uname" id="uname" value="" /><br>
+
+				<!-- <label  for="upass">密码：</label> -->
+				<input class="txtb" placeholder="密码" type="password" name="upass" id="upass" value="" /><br>
+				
+				<!-- <label for="repw">确认密码：</label> -->
+				<div style="display: inline;">
+				<input class="txtb" placeholder="确认密码"  id="repw" type="password" class="kuang_txt possword" size="20px"  onkeyup="checkpassword()">
+					<span id="tishi"></span>
+				</div><br>
+				
+				<!-- <label>区域：</label> -->
+				<div class="select" style="">
+					<select class="prov" name="uprov">
+						<option value="sichuan">四川省</option>
+						<option value="广东省">广东省</option>
+						<option value="湖南省">湖南省</option>
+						<option value="湖北省">湖北省</option>
+					</select>
+					
+					<!-- <label for="uage">年龄：</label> -->
+					<input class="age" placeholder="年龄" type="number" name="uage" id="uage" value="" /><br>
+					
+				</div>
+				
+				<div class="gender">
+					<label class="sex" for="male">男</label><input type="radio" name="ugender" id="male" value="boy" /> 
+					<input type="radio" name="ugender" id="female" value="girl" /><label class="sex" for="female">女</label><br>
+				</div>
+				
+				<!-- <label>性别：</label> -->
+				
+				<!-- <label for="udate">生日：</label> -->
+				<input class="txtb" type="date" name="udate" id="udate" style="font-family: 'Permanent Marker', cursive;" /><br>
+				
+				<!-- <label for="utel">手机：</label> -->
+				<input class="txtb" placeholder="文件" type="tel" name="utel" id="utel" value="" /><br>
+				
+				<!-- <label for="uphoto">头像：</label> -->
+				<input class="txtb" placeholder="文件" type="file" name="uphoto" id="uphoto" value="" /><br>
+				
+				<!-- <label for="uurl">主页：</label> -->
+				<input class="txtb" placeholder="文件" type="url" name="uurl" id="uurl" value="" /><br>
+				
+				<!-- <label for="uemail">Email：</label> -->
+				<input class="txtb" placeholder="文件" type="email" name="uemail" id="uemail" value="" /><br>
+				
+				<!-- <label for="ubackcolor">背景色：</label> -->
+				<input class="txtb" placeholder="文件" type="color" name="ubackcolor" id="ubackcolor" value="" /><br>
+				
+				<div class="checkbox">
+					<input type="checkbox"/>
+					<label>同意服务条款</label><br>
+				</div>
+				
+				<div class="sub">	
+					<input class="txtb" placeholder="文件" class="btn" type="submit" value="注册" />
+					<input class="txtb" placeholder="文件" class="btn" type="reset" value="重置" />
+					<input class="txtb" placeholder="文件" class="btn" type="button" value="按钮" title="一个普普通通的按钮，按下它并不会有什么反应" />
+				</div>
+			</form>
+		</div>	
+		<script type="text/javascript">
+			window.onload = function() {
+				Particles.init({
+				selector: '.background'
+				});
+			};
+			function checkpassword() {
+		        var password = document.getElementById("upass").value;
+		        var repassword = document.getElementById("repw").value;
+		
+		        if(password == repassword) {
+		            document.getElementById("tishi").innerHTML="<font color='green'>两次密码输入一致</font>";
+		            document.getElementById("submit").disabled = false;
+		
+		        }else{
+		            document.getElementById("tishi").innerHTML="<font color='red'>两次输入密码不一致!</font>";
+		            document.getElementById("submit").disabled = true;
+		        }
+		    }
+		</script>
+	</body>
+</html>

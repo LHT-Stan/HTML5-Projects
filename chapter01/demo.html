@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css选择器练习</title>
+		<style type="text/css">
+			/*后代选择器*/
+			div .mytest{
+				background-color: #00ff00;
+			}
+			/*限定式选择器*/
+			div.mytest{
+				background-color: #ff0000;
+			}
+			
+			/*列表奇数偶数行设置不同样式*/
+			
+		</style>
+	</head>
+	<body>
+		<div>
+			<p class="mytest">新闻列表</p>
+		</div>
+		<div class="mytest">
+			<ul>
+				<li>国内疫情动态</li>
+				<li>国外疫情动态</li>
+				<li>求医问药</li>
+				<li>辟谣专区</li>	
+				<li>国内疫情动态</li>
+				<li>国外疫情动态</li>
+				<li>求医问药</li>
+				<li>辟谣专区</li>	
+			</ul>
+		</div>
+		
+	</body>
+</html>

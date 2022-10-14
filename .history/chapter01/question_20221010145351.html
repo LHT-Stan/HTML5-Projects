@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			#parent{font-size: 50px;}
+			.son{font-size: 30px;}
+			#parent #child{font-size: 100px;}	
+			#child{font-size: 80px;} 
+			#parent .son{font-size: 10px;}
+			
+							
+		</style>
+	</head>
+	<body>
+		<!--层叠特性
+			1.没有冲突，样式叠加在一起使用
+			2.冲突，看优先级权重  1标签 10class 100id 累加
+			3.权重一样，后面定义的会被使用
+			4.！important可以提升优先级
+		-->
+		<div id="parent">
+			hello world
+			<div id="child" class="son">
+				字体到底多大?
+			</div>
+		</div>
+	</body>
+</html>
