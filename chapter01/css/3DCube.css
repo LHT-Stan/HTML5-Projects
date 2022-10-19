@@ -1,0 +1,51 @@
+.container{
+    width: 200px;height: 200px;margin: 300px;
+    perspective: 800px;/*视距*/-webkit-perspective: 800px;
+}
+.container .cube{
+    width: 200px;height: 200px;position: relative;
+    transform-style: preserve-3D;/*指定3D空间*/-webkit-transform-style:preserve-3D ;
+    animation: myRotate 5s infinite;
+}
+@keyframes myRotate {
+    from{ transform: rotateX(0deg) rotateY(0deg);
+    }
+    to{transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+.container .cube div{
+    width: 200px;height: 200px;border: 2px solid black;position: absolute;
+    font-size: 160px;color: white;text-align: center;line-height: 200px;opacity: 0.5;/*透明度*/
+}
+    
+.container .cube div:nth-child(1){/*正面*/
+    background-color: #c35478;
+    transform: translateZ(100px);
+    -webkit-transform:translateZ(100px);
+}
+.container .cube div:nth-child(2){/*背面*/
+    background-color: #23c33a;
+    transform: rotateY(180deg) translateZ(100px);
+    -webkit-transform:rotateY(180deg) translateZ(100px);
+
+}
+.container .cube div:nth-child(3){ /*左面*/
+    background-color: #472ec3;/*top: 200px;*/
+    transform: rotateY(-90deg) translateZ(100px);
+    -webkit-transform:rotateY(-90deg) translateZ(100px);
+}
+.container .cube div:nth-child(4){ /*右面*/
+    background-color: #c3c22f; /*top: 200px;*/
+    transform: rotateY(90deg) translateZ(100px);
+    -webkit-transform:rotateY(90deg) translateZ(100px);
+}
+.container .cube div:nth-child(5){ /*上面*/
+    background-color: #5fbfc3;/*top: 200px;*/
+    transform: rotateX(90deg) translateZ(100px);
+    -webkit-transform:rotateX(90deg) translateZ(100px);
+}
+.container .cube div:nth-child(6){ /*下面*/
+    background-color: #fd6eff;
+    transform: rotateX(-90deg) translateZ(100px);
+    -webkit-transform:rotateX(-90deg) translateZ(100px);
+}

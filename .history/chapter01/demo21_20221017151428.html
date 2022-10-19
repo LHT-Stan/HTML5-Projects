@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+   div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 10px;
+    transition: all 5s;
+   }
+   #div1:hover {
+    /* 平移 */
+    /* transform: translate(100px,0px); */
+    transform: translate(0px,-5px);
+    box-shadow: 3px 3px 15px gray;/* 阴影效果 */
+   }
+   #div2:hover {
+    /* 2D旋转，顺时针时正方向 */
+    transform: rotate(20deg);
+    transform: rotate(-10deg);
+    /* 前置浏览器 ，-webkit- 浏览器内核前缀*/
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    transform: rotateX(70deg);
+    transform: rotateY(70deg);
+   }
+   #div3:hover {
+    /* 缩放 */
+    transform: scale(1.5, 0.5);
+   }
+   img {
+    width: 100%;
+    transition: all 1s;
+   }
+   img:hover {
+    transform: scale(1.5);
+   }
+   #div4 {
+    overflow: hidden;
+    /* 内容溢出的部分被剪裁，不可见 */
+    /* overflow  规定内容溢出元素框时的处理 
+       hidden  内容会被剪裁，多余部分不可见*/
+   }
+   #div5:hover {
+    /* 扭曲 */  /* deg 角度*/
+    transform: skew(30deg);
+   }
+  </style>
+ </head>
+ <body>
+  <div  id="div1"></div>
+  <div  id="div2">我是div2，注意我的旋转效果</div>
+  <div  id="div3" ></div>
+  <div  id="div4">
+   <img src="../img/img/icon.jpg"/>
+  </div>
+  <div  id="div5"></div>
+ </body>
+</html>

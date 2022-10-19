@@ -1,0 +1,23 @@
+.container{/*场景*/
+    width: 500px;height: 1000px;border: 2px solid black;margin: 0 auto;
+    perspective: 800px;/*视距*/ -webkit-perspective: 800px ;
+}
+.container .father{ /*后代选择器*/
+    width: 400px;height: 200px;border: 2px solid black;margin: 30px auto;
+    transform-style: preserve-3D;/*指定3D空间*/-webkit-transform-style:preserve-3D;
+}
+.container .father div{
+    width: 400px;height: 200px;border: 2px solid #ff4834;margin: 0px auto;
+    font-size: 160px ;color: blue;text-align: center;line-height: 200px;/*和div高一样方便垂直居中*/
+   transition: all 1s; 
+}
+.container .father:nth-child(1) div:hover{/*CSS3 nth-child()选择器*/
+    transform: rotateX(30deg);-webkit-transform:rotateX(30deg);
+}
+.container .father:nth-child(2) div:hover{/*CSS3 nth-child()选择器*/
+    transform: rotateY(50deg);-webkit-transform:rotateY(50deg);
+}
+.container .father:nth-child(3) div:hover{/*CSS3 nth-child()选择器*/
+    transform: rotateZ(30deg);-webkit-transform:rotateZ(30deg);
+    
+}
