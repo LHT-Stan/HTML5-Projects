@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>浮动布局-文字环绕效果</title>
+		<style type="text/css">
+			div#mydiv{
+				width: 400px;
+				height: 320px;
+				border:1px dashed black;
+				margin: 20px auto;	
+					
+			}
+			#mydiv img{
+				width:150px;
+				height:100px ;				
+				margin: 10px;
+				/* 浮动布局 */
+				float: right;
+						
+			}	
+				
+		</style>
+	</head>
+	<body>
+		<div id="mydiv">
+			<img src="img/head.jpg"  />			
+			<p>块元素与行内元素
+   块元素在页面中以区域块的形式出现，它会独自占据一行或多行，可以对其设置宽度、高度、对齐等属性，有h1~h6、div、p、ul、li等。
+     行内元素不一样，一个行内元素通常都会和它前后的行内元素显示在同一行中，不占独立的区域。但一般不能设置宽度、高度、对齐等属性。常见的行内元素标签有span、a等。块元素和行内元素之间是可以互相转换的。 
+
+			</p>
+		</div>
+	</body>
+</html>

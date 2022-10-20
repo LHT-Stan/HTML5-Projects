@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>浮动float应用示例</title>
+		<style>
+			#parent{
+				width: 400px;
+				height: 320px;
+				border:1px dashed black;
+				margin: 20px auto;
+			}
+			#parent div {
+				
+				width: 150px;
+				height: 100px;
+				background-color: yellow;
+				text-align: center;
+				line-height: 100px;
+				margin: 5px 10px;
+				float: left;
+				
+			}
+			#parent #div1{
+				height: 150px;
+			}			
+			#parent #div3{
+				 /*清除左右两边的浮动元素*/
+				 clear: both;
+			}
+		
+		</style>
+	</head>
+	<body>
+		<div id="parent">
+			<div id="div1">div1</div>
+			<div id="div2">div2</div>
+			<div id="div3">div3</div>
+		</div>
+	</body>
+</html>
