@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<title>垂直居中</title>
+		<style>
+			#father {
+				background-color: red;
+				width: 40%;
+				height: 300px;
+				margin: 0 auto;
+				position: relative;
+			}
+
+			#son1 {
+				background-color: #c3be4b;
+				width: 100px;
+				height: 70px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				z-index: 1;
+
+			}
+
+			#son2 {
+				background-color: #16c336;
+				width: 100px;
+				height: 70px;
+		 		position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -50px;
+				margin-top: -35px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="father">父亲
+			<div id="son1">儿子1</div>
+			<div id="son2">儿子2</div>
+		</div>
+	</body>
+</html>
