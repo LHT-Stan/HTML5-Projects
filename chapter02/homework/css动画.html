@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    /* 初始化 */
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* 100%窗口高度 */
+    height: 100vh;
+    /* 弹性布局 水平+垂直居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 渐变背景 */
+    background: linear-gradient(200deg,#2f80ed,#56ccf2);
+}
+.ball-box{
+    width: 150px;
+    height: 150px;
+    /* 执行动画：动画名 时长 减速 先反向再正向 无限次播放 */
+    animation: bounce 0.6s ease-out alternate-reverse infinite;
+}
+.ball{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #f7972b;
+    background-color: blue;
+    /* 绝对定位 */
+    position: absolute;
+    z-index: 1;
+    /* 执行动画：动画名 时长 线性 无限次播放 */
+    animation: roll 3s linear infinite;
+    font-size: 70px;
+    line-height: 200px;
+    text-align: center;
+    border: 5px solid #fff;
+}
+
+.shadow{
+    width: 200px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    right: 1160px;
+    bottom: 25vh;
+    z-index: -1;
+    filter: blur(1.5px);
+    animation: shadow 0.6s ease-out alternate-reverse infinite;
+}
+
+/* 定义动画 */
+/* 篮球弹跳的动画 */
+@keyframes bounce {
+    0%{
+        transform: translateY(15vh);
+    }
+    100%{
+        transform: translateY(-20vh);
+        
+    }
+}
+/* 篮球旋转的动画 */
+@keyframes roll {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* 阴影的动画 */
+@keyframes shadow {
+    0%{
+        transform: scale(0.15,1.25);
+    }
+    100%{
+        transform: scale(1.25,0.75);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="ball-box">
+        <div class="ball">
+            CSS3
+        </div>
+    </div>
+    <div class="shadow"></div>
+    
+</body>
+
+</html>
