@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>flex弹性布局</title>
+		<style type="text/css">
+			.container {
+				background-color: black;
+				width: 300px;
+				height: 400px;
+				display: flex;
+
+				/* 属性1:规定主轴方向 */
+				/* flex-direction: row; 参数对应按行显示或者按列显示 */
+				/* flex-direction: column; 按列 */
+				/* flex-direction: column-reverse; 列反向 */
+				/* flex-direction: row-reverse; 列反向 */
+				/* flex-direction: row; */
+
+
+				/* 属性2：规定空间不够时，如何换行 */
+				/* flex-wrap: nowrap; 每一个项目都会被压缩 */
+				/* flex-wrap: wrap; */
+				/* flex-wrap: wrap-reverse; */
+				
+
+				/* 属性3:3=1+2 */
+				/* flex-flow: row wrap; */
+
+
+				/* 属性4：定义了项目在主轴上的对齐方式 */
+				/* justify-content: flex-start; */
+				/* justify-content: end; */
+				/* justify-content: center; */
+				/* justify-content: space-between;  间隔一样 */
+				/* justify-content: space-around;   左右各占同宽 */
+
+
+				/* 属性5：定义项目单行在交叉轴上对齐 */
+				/* align-items: flex-end; */
+				/* align-items: center; */
+				/* 基准线对齐，以内容文字对齐 */
+				/* align-items: baseline; */
+				/* 拉伸 */
+				/* align-items: stretch;  把item高注释能看到效果 */
+				
+
+				/* 属性6：定义项目多行在交叉轴上对齐 */
+				/* align-content: flex-start;  item3不会被挤上去 */
+
+
+			}
+
+			.item {
+				background-color: gold;
+				width: 100px;
+				height: 100px;
+				margin: 10px;
+				/* 属性8：flex-grow:定义项目的放大比例，
+				默认为0，即如果存在剩余空间，也不放大*/
+				/* flex-grow: 1; */
+
+
+				/* 属性9：flex-shrink:定义了项目的缩小比例，
+				默认为1，即如果空间不足，该项目将缩小,如果为0，则不缩小*/
+				/* flex-shrink: 1; */
+
+				
+			}
+			#item3{
+				/* 属性7： order 排序*/
+				/* line-height:100px ; */
+				/* order: -1; */
+				/* flex-shrink: 2; */
+
+				/* 属性10，理想宽高 优先级高于设定的宽高*/
+				/* flex-basis: 200px; */
+
+				/* 属性十一=8+9+10 */
+				flex: auto;
+				
+				align-self: flex-end;
+			}
+
+			.item:nth-child(1){
+				align-self: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="item">1</div>
+			<div class="item">2</div>
+			<div class="item" id="item3">3</div>
+		</div>
+	</body>
+</html>

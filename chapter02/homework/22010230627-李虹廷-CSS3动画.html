@@ -32,7 +32,6 @@ body{
     height: 200px;
     border-radius: 50%;
     background-color: #f7972b;
-    background-color: blue;
     /* 绝对定位 */
     position: absolute;
     z-index: 1;
@@ -50,7 +49,7 @@ body{
     border-radius: 50%;
     background-color: rgba(0,0,0,0.4);
     position: absolute;
-    right: 1160px;
+    left: 885px;
     bottom: 25vh;
     z-index: -1;
     filter: blur(1.5px);
@@ -73,8 +72,13 @@ body{
     0%{
         transform: rotate(0deg);
     }
+    50%{
+        transform: rotate(180deg);
+        background: #48b5c9;
+    }
     100%{
         transform: rotate(360deg);
+        background: #1ec7e6;
     }
 }
 /* 阴影的动画 */
@@ -84,6 +88,7 @@ body{
     }
     100%{
         transform: scale(1.25,0.75);
+        
     }
 }
 
@@ -95,8 +100,7 @@ body{
             CSS3
         </div>
     </div>
-    <div class="shadow"></div>
-    
+    <div class="shadow"></div>      
 </body>
 
 </html>
