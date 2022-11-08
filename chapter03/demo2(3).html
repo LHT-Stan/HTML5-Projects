@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var x1 = true;
+			var x2 = x1.toString(); //"true"
+			console.log(typeof(x2));
+			var x4 = 16;
+			console.log(x4.toString("16"));
+
+			var x3;
+			// console.log(x3.toString());//出错，需要强制类型转换
+			console.log(String(x3));
+
+			var x5 = "123abc8";
+			x5 = "120px";
+			console.log(parseInt(x5));
+
+			var s = "abcd";
+			alert(isNaN(s)); //返回true
+			var s2="123";//"123"==123
+			alert(isNaN(s2));//false
+			//常用来判断变量是否能自动转换成数值类型
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+body{
+    background-color: #f0efed;
+    color: #333;
+    font-size: 0.28rem;
+}
+header,main,footer{
+    width: 100%;
+}
+
+header{
+    height: 0.4rem;
+    background-color: gray;
+    position: fixed;
+    top: 0;
+}
+
+main{
+    height: 20rem;
+    background-color: red;
+}
+
+footer{
+    height: 0.8rem;
+    background-color: yellow;
+    position: fixed;
+    bottom: 0;
+}

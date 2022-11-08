@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/* 错误处理try/catch
+			try/catch可以让错误发生时，继续运行代码，而不是直接停止。
+			可能出错的代码放在try块里，处理错误的代码放在catch块，下面
+			代码中isNum是不存在的方法，代码自动跳转到catch块，
+			接受错误对象err,该对象包含发生错误的相关信息。err对象的messages
+			属性显示具体错误信息。			
+			*/
+			try{
+				window.isNum();
+			}catch(err){
+				console.log(err.message);
+			}finally{
+				console.log("无论有没有错误，都会执行finally块代码");				
+			}
+			var sum = 0;
+			var i = 1;
+			while (i <= 10) {
+				//sum=sum+i;
+				sum += i;
+				i++;
+				console.log("hello");
+			}
+			alert(sum);
+
+			//    var sum=0;
+			//    var i=1;
+			//    do{
+			//    	sum+=i;
+			// 	i++;
+			//    }while(i<=10);
+			//    alert(sum);
+		</script>
+	</body>
+</html>
