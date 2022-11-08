@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    .dice-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .dice-box div{
+        width: 104px;
+        height: 104px;
+        border-radius: 10px;
+        background-color: #e7e7e7;
+        display: flex;
+    }
+    .dice-box div div:nth-child(n){
+        width: 24px;
+        height: 24px;
+        background-color: black;
+        border-radius: 12px;
+        margin: 5px;
+    }
+    .box1,.box2{
+        justify-content: center;
+        align-items: center;
+    }
+    .box4,.box6{
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between; 
+    }
+    .box4 .point:nth-child(n){
+        margin: 10px;
+    }
+    .box5{
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between; 
+        position: relative;
+    }
+    .box5 .point:nth-child(2){
+        position: relative;
+        left: 25px;
+    }
+    .box3 .point:nth-child(2){
+		align-self: center;
+	}
+    .box3 .point:nth-child(3){
+        align-self: flex-end;
+	}
+</style>
+<body>
+    <div class="dice-box">
+        <div class="box1">
+            <div class="point1"></div>
+        </div>
+        <div class="box2">
+            <div class="point"></div>
+            <div class="point"></div>
+        </div>
+        <div class="box3">
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+        </div>
+        <div class="box4">
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+        </div>
+        <div class="box5">
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+        </div>
+        <div class="box6">
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+        </div>
+    </div>
+</body>
+</html>
