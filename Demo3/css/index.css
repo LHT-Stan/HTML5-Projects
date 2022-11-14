@@ -35,16 +35,96 @@ header{
 	background-color: rgb(240,239,237);
 }
 main{
-    height: 20rem;
+    
 	margin-top: 0.35rem;
 }
 .imgTop img{
 	width: 100%;
 }
+ul{
+	height: 1.8rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-color: white;
+	
+}
+main ul li{
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 0.25rem;
+	margin: 10px;
+	margin-left: 11px;
+	text-align: center;
+}
+ul li span{
+	display: block;
+	text-align: center;
+	font-size: 0.1rem;
+}
+ul li i{
+	color: white;
+	line-height: 0.5rem;
+}
+.youlove{
+	margin-top: 10px;
+	height: 500px;
+	background-color: white;
+}
+.youlove span{
+	font-size: 12px;
+	color: rgb(137, 138, 134);
+}
+.food_img{
+	width: 1rem;
+	height: 1rem;
+}
+.right{
+	height: 1rem;
+	padding-left: 10px;
+}
+main .youlove ul li{
+	display: flex;
+	width: 100%;
+	height: 1rem;
+	text-align: left;
+	margin-left: 20px;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.food_title{
+	font-size: 12px;
+	margin-top: 7px;
+}
+.food_body{
+	font-size: 10px;
+	color: rgb(137, 138, 134);
+	padding-bottom: 40px;
+}
+.food_footer{
+	display: flex;
+	font-size: 10px;
+}
+.money{
+	text-align: left;
+}
 footer{
     height: 0.8rem;
-    background-color: yellow;
     position: fixed;
     bottom: 0;
 }
-
+.footer_box{
+	height: 100%;
+	background-color: white;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.footer_box i{
+	font-size: 0.2rem;
+}
+.menu{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}

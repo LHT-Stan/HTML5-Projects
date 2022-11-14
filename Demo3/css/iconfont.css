@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3758324 */
-  src: url('iconfont.woff2?t=1667907820721') format('woff2'),
-       url('iconfont.woff?t=1667907820721') format('woff'),
-       url('iconfont.ttf?t=1667907820721') format('truetype');
+  src: url('iconfont.woff2?t=1667968236985') format('woff2'),
+       url('iconfont.woff?t=1667968236985') format('woff'),
+       url('iconfont.ttf?t=1667968236985') format('truetype');
 }
 
 .iconfont {
@@ -13,8 +13,63 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-31wode:before {
+  content: "\e602";
+}
+
+.icon-shouye:before {
+  content: "\e751";
+}
+
+.icon-dingdan:before {
+  content: "\e645";
+}
+
+.icon-nvren:before {
+  content: "\e600";
+}
+
+.icon-dianyingpiao:before {
+  content: "\e601";
+}
+
+.icon-ktv:before {
+  content: "\e646";
+}
+
+.icon-gengduo:before {
+  content: "\e73a";
+}
+
+.icon-hotel:before {
+  content: "\e61b";
+}
+
+.icon-zhoubianyou:before {
+  content: "\e8a2";
+}
+
+.icon-icon-test:before {
+  content: "\e613";
+}
+
+.icon-meishi:before {
+  content: "\e630";
+}
+
+.icon-jiweijiubeigaojiaobei:before {
+  content: "\e61a";
+}
+
+.icon-waimai:before {
+  content: "\e61c";
+}
+
+.icon-zhoubianyou1:before {
+  content: "\fe6b";
+}
+
 .icon-xialajiantou:before {
   content: "\e642";
-  font-size: 10px;
 }
 

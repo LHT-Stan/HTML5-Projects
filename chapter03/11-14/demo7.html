@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //var obj = new Object();//实例化一内存对象，内存空间已经开辟
+        //一般常用下面的方法创建,打包数据用
+        var obj1 = {
+           
+        }
+        obj1.name = "张三"
+        obj1.age = 21
+        alert(obj1.name)
+        //挂载方法
+        obj1.showMsg=function(msg){
+            console.log("挂载的方法"+msg)
+        }
+        obj1.showMsg("，传递的参数")
+        //写法二 实例化的同时，给值
+        var obj2 = {
+            name: "张三",
+            age: 22,
+            //主要关注匿名函数的用法
+            showMsg:function(msg){
+                console.log("挂载的方2"+msg)
+            }
+        }
+    </script>
+</body>
+</html>

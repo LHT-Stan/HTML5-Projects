@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//变量x 方法test123都是挂在window对象上
+			var x=7;
+			//alert(x);
+			//window.alert(window.x);
+			function test123(){
+				console.log("hello");
+			}
+			test123();
+			window.test123();
+			
+			//confirm("你还喜欢h5吗");
+			//var res=confirm("你还喜欢h5吗");
+			//alert(res);
+			
+			//prompt("h5里更喜欢学习");
+			//var str=prompt("h5里更喜欢学习");
+			//alert(str);
+			
+			//setInterval("alert('hello')",2000);
+			function showMsg(){
+				alert('hello');
+			}
+			//setInterval(showMsg,1500);//正确
+			/*showMsg()错误的写法
+			var r=showMsg();
+			console.log(r);//undefined 
+			setInterval(showMsg(),1500);
+			*/
+		   function test(x){
+			   alert(x);
+		   }
+	var sid=setInterval(function(){test(0);},1500);
+		   clearInterval(sid);
+		</script>
+	</body>
+</html>

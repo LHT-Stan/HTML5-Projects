@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function text(A,B){
+            return A > B ? A: B
+        }
+        text(3,4)
+        // 匿名函数 方法一
+        var max=function(a,b){
+            return a > b? a:b;
+        }
+        //只能在匿名函数下方调用
+        max(5,4)
+        
+        //方法二(括号包起函数，右边括号实参，内存开销最小)
+        //定义完函数直接调用
+        var res = (function(a,b){
+            return a > b? a:b;
+        })(4.,5)//使用res即可获取返回值
+
+        //方法三 箭头函数lambda表达式、函数
+        //正常写法
+        function test(x){
+            return x**2
+        }
+        //箭头函数，左边参数，右边函数体
+        var z = x=>x**2
+        //调用
+        z(5) //return可以省略，所以原函数体是return x+y
+        z=(x,y) => x+y
+        z=(5,6)
+        
+    </script>
+</body>
+</html>

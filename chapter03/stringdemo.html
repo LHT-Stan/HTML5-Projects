@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">    
+    <title></title>
+  </head>
+  <body>
+	   请打开Chrome的开发者工具（F12),切换到consoleee面板，查看控制台输出
+    <script>
+      var myString = "This is a sample";
+      console.log(myString.charAt(2));//输出"i"
+      console.log(myString.charCodeAt(2));//输出"105" i的ASKII码
+      console.log(myString.indexOf("is"));//输出"2"
+      console.log(myString.lastIndexOf("is"));//输出"5"
+      console.log(myString.substr(10,3));//输出"sam",其中10表示位置，3表示长度
+      console.log(myString.substring(5,9));//输出"is a",其中5表示开始位置，9表示结束位置（不包括9）
+      var arr = myString.split(" ");//指定字符分割字符串，此处是空格分割字符串
+      console.log("分割后："+arr);
+      console.log(arr[arr.length-1]);//输出"sample"
+      var newString=myString.replace("sample","apple");
+      console.log(myString);//原字符串不变，输出"This is a sample"
+      console.log(newString);//输出"This is a apple"
+      console.log(myString.toLowerCase());//输出"this is a sample"
+      console.log(myString.toUpperCase());//输出"THIS IS A SAMPLE"
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">    
+    <title></title>
+  </head>
+  <body>
+    请打开Chrome的开发者工具（F12),切换到Console面板，查看控制台输出
+    <script>
+      var myDate=new Date("2022-09-01 12:30:15");
+      myDate.setFullYear(2022);
+      myDate.setMonth(8);//0开头
+      myDate.setDate(15);
+      myDate.setHours(0);
+      myDate.setMinutes(0);
+      myDate.setSeconds(0);
+      console.log(myDate.getFullYear()+"年"+(myDate.getMonth()+1)+"月"+myDate.getDate()+"日 星期"+myDate.getDay()+" "+myDate.getHours()+"时"+myDate.getMinutes()+"分"+myDate.getSeconds()+"秒是中国的中秋佳节！");
+      //输出"2022年9月15日 星期4 0时0分0秒是中国的中秋佳节！"
+    </script>
+  </body>
+</html>

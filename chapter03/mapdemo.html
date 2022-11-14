@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var dic = new Map();
+			console.log(dic);
+			//写入值，加入键值
+			dic.set("zhangsan", 90);
+			dic.set("lisi", 50);
+			//取出值
+			var score = dic.get("zhangsan");
+			console.log(score);
+			//遍历
+			dic.forEach(function(num, index) {
+				console.log(num);
+			});
+			//箭头函数写法
+			dic.forEach((num, index) => {
+				console.log(num);
+			});
+			//判断有无值
+			var hasLisi = dic.has("lisi");
+			console.log(hasLisi);
+			//删除某值
+			dic.delete("lisi");
+			//完全清除   
+			dic.clear();
+		</script>
+	</body>
+</html>
