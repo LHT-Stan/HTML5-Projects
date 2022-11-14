@@ -15,12 +15,13 @@
         }
         obj1.name = "张三"
         obj1.age = 21
-        alert(obj1.name)
+        //alert(obj1.name)
         //挂载方法
         obj1.showMsg=function(msg){
             console.log("挂载的方法"+msg)
         }
-        obj1.showMsg("，传递的参数")
+        //obj1.showMsg("，传递的参数")
+
         //写法二 实例化的同时，给值
         var obj2 = {
             name: "张三",
@@ -30,6 +31,7 @@
                 console.log("挂载的方2"+msg)
             }
         }
+        obj2.showMsg(123)
     </script>
 </body>
 </html>

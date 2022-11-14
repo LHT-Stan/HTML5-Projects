@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /**
+         * 自定义类
+         * 构造器
+         **/
+        function Student(name,age,){
+            this.name = name
+            this.age = age
+            alert(this)
+        }
+        //原型法 js独有的
+        Student.prototype.showMsg=function(){
+            alert(this.name+","+this.age)
+        }
+        //初始化
+        var stu = new Student("lisa",20) //学生对象的方法
+        stu.showMsg
+        stu.age = 21
+        stu.showMsg
+        //作为函数调用
+        Student("li",30) //window对象的方法
+        /**
+         * class类构造
+         * */
+        class Student{
+            constructor(name,age){
+                this.name = name
+                this.age = age
+            }
+            showMsg(){
+                
+            }
+        }
+    </script>
+</body>
+</html>
