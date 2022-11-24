@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id="datalist">
+			<li>xhtml</li>
+			<li>css</li>
+			<li>js</li>
+		</ul>
+		<script type="text/javascript">
+			//新节点
+			var newli=document.createElement("li");
+			newli.innerText="html";
+			//旧
+			var oldli=document.querySelector("#datalist li:first-child");
+			//父
+			var oul=document.getElementById("datalist");
+			//替换
+			oul.replaceChild(newli,oldli);
+		</script>
+	</body>
+</html>

@@ -9,4 +9,17 @@
 <body>
     <div id="mydiv" data-newsid="001"> </div>
 </body>
+<script>
+    //自定义属性操作
+    var odiv = document.getElementById("mydiv")
+    console.log(odiv.getAttribute("data-newsid"));
+    odiv.setAttribute("data-newsid","002")
+    console.log(odiv.getAttribute("data-newsid"));
+    
+    //方法二标准属性操作
+    console.log(odiv.id)//缺点只能更改属性已有的标准值
+    odvi.id = "test";
+    //删除
+    odiv.removeAttribute("data-newsid")
+</script>
 </html>

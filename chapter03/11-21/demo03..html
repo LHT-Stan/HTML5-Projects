@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title></title>
+ </head>
+ <body>
+  <!-- <div id = "mydiv">
+   <div>html5</div>
+   </div> -->
+   <script>
+    //创建节点
+    var fdiv = document.createElement( "div" );
+    fdiv.id = "div";
+    var sdiv = document.createElement( "div" );
+    //sdiv.innerText = "html5";
+    //创建文本节点
+    var ot = document.createTextNode( "HTML5" );
+    //形成嵌套结构的树形结构
+    sdiv.appendChild( ot )//尾部追加
+    fdiv.appendChild( sdiv );
+    document.body.appendChild( fdiv );                                                                      
+   </script>
+ </body>
+</html>

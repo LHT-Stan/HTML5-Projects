@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.newclass {
+				width: 200px;
+				height: 200px;
+				background-color: yellow;
+			}
+
+			.borderclass {
+				border: 5px solid blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="mydiv"></div>
+		<input type="button" id="mybtn1" value="add css" onclick="addClass()"/>
+		<input type="button" id="mybtn2" value="remove css" onclick="removeClass()"/>
+		<input type="button" id="mybtn3" value="toggle css" />
+		<script>
+			var odiv = document.getElementById("mydiv");
+			var obtn1 = document.getElementById("mybtn1");
+			// function addClass(){
+			// 	odiv.className = "newclass borderclass"
+			// }
+			// function removeClass(){
+			// 	odiv.className = " "
+			// }
+			//普通
+			// obtn1.onclick=function(){
+			// 	odiv.className = "newclass borderclass"
+			// 	odiv.className = " "
+			// }
+			// 标准
+			obtn1.addEventListener("click",function(){
+				odiv.className = "newclass"
+				//当代码逻辑比较复杂时可以用classList当中有很多方法
+				odiv.classList.add("borderclass")
+				console.log(odiv.classList.length)
+			},false)
+			// 移除
+			var obtn2 = document.getElementById("mybtn2");
+			obtn2.addEventListener("click",function(){
+				//当代码逻辑比较复杂时可以用classList当中有很多方法
+				odiv.classList.remove("borderclass")
+				
+			},false)
+			var obtn3 = document.getElementById("mybtn3");
+			obtn3.addEventListener("click",function(){
+				//当代码逻辑比较复杂时可以用classList当中有很多方法
+				// if (odiv.classList.contains("borderclass")){
+				// 	odiv.classList.remove("borderclass")
+				// }else{
+				// 	odiv.classList.add("borderclass")
+				// }
+				// 等于上面的if判断
+				odiv.classList.toggle("borderclass")
+				// 方法三 针对单个属性
+				odiv.style.backgroundColor="red"
+				wi = 400
+				odiv.style.width = wi+"px"
+			},false)
+		</script>
+	</body>
+</html>

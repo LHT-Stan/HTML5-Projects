@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id="datalist">
+			<li>xhtml</li>
+			
+			<li>css</li>
+			<li>js</li>
+		</ul>
+		<script type="text/javascript">
+			//新节点
+			var newli=document.createElement("li");
+			newli.innerText="html";			
+			//父
+			var oul=document.getElementById("datalist");
+			//追加
+			//oul.appendChild(newli);
+			//目标节点<li>css</li>
+			var oli=document.querySelector("#datalist li:nth-child(2)");
+			//前插
+			oul.insertBefore(newli,oli);
+			
+		</script>
+	</body>
+</html>

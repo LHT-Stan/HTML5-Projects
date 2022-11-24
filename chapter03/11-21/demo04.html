@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#parent {
+				width: 200px;
+				height: 200px;
+				margin: 0 auto;
+				background-color: yellow;
+			}
+
+			#child {
+				width: 100px;
+				height: 100px;
+				margin: 0 auto;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="parent">
+			<div id="child">
+				hello
+			</div>
+		</div>
+		<script>
+			var oparent = document.getElementById("parent");
+            var ochild = document.getElementById("child");
+            //oparent.removeChild(ochild);
+            setTimeout(function(){
+                oparent.removeChild(ochild);
+            },3000)
+            //写法二
+            ochild.parentNode.removeChild(ochild);
+		</script>
+	</body>
+</html>
+

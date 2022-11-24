@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 这种写法一般用于测试，不推荐使用 -->
+    <input type="button" value="事件测试1" onclick="alert(1);">
+    <!-- 通过id，查询元素绑定事件 -->
+    <input type="button" value="事件测试2" id="btn2">
+    <input type="button" value="事件测试2" id="btn3">
+    <script>
+        //事件挂上 内联 不推荐 仅用作测试
+        //DOM属性绑定，后绑定的事件会覆盖前面的事件绑定
+        var obtn2 = document.getElementById("btn2")
+        obtn2.onclick=function(){
+            alert("hello1")
+        }
+        // 第二种
+        function showMsg(){
+            alert("hello2")
+        }
+        // 此处引用时不能加括号，加括号为只一次调用，不加括号为函数入口点
+        obtn2.onclick=showMsg 
+        // 第三种，标准事件监听函数（解决多次事件绑定的情况）
+        var obtn3 = document.getElementById("btn3")
+        //三个参数，绑定的随事件类型、事件发生以后触发的代码、是否冒泡的监听
+        //以下三个事件不会被覆盖，都会出现
+        obtn3.addEventListener("click",function(){
+            alert("hello3")
+        },false)
+        obtn3.addEventListener("click",function(){
+            alert("hello4")
+        },false)
+        obtn3.addEventListener("click",showMsg,false)
+        // 移除
+        obtn3.removeEventListener("click",showMsg,false)
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id="datalist"></ul>
+		<script type="text/javascript">
+			//父节点
+			var oul=document.getElementById("datalist");
+			//文档碎片
+			var frag=document.createDocumentFragment();
+			for(let i=0;i<1000;i++){
+				var newli=document.createElement("li");
+				newli.innerText="item"+(i+1);
+				frag.appendChild(newli);
+				//oul.appendChild(newli);//频繁重绘影响性能
+			}
+			oul.appendChild(frag);
+		</script>
+	</body>
+</html>
